@@ -5,7 +5,7 @@ let page = 1
 
 let callAPI = async () => {
     let apiKey = `c74225add6af4f70b0edb124c26f779e`
-    let url = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}&page=${page}`
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}&page=${page}`
     
     let data = await fetch(url);
     let result = await data.json();
@@ -22,7 +22,6 @@ let callAPI = async () => {
     render(newsList)
 
 }
-
 let render = (array) => {
     let htmlForNews = array.map((item,index) =>{
         return `<div id="news" style="display: flex; border: 1px solid grey">
@@ -43,29 +42,6 @@ let render = (array) => {
 
 document.getElementById('newsArea').innerHTML = htmlForNews
 }
-
-// const nameTitle = (articles) => {
-//     articles.map(a => {
-//         let source = a.source.name;
-//         if(sourceTitle[source] == null){
-//             sourceTitle[source] = 0;
-//         };
-//         sourceTitle[source]++;
-//     })
-//     showTitleSource();
-// }
-
-// const showTitleSource = () => {
-//     let arr = Object.keys(sourceTitle);
-//     const html = arr.map((sourceTitle, i) => {
-//         return `
-//         <li class="list-group-item list-group-item-action pl-1 pl-sm-5"><input type="checkbox" class="form-check-input" id="${sourceTitle}" onchange="renderNewsBySource(${i})"><label for="${sourceTitle}">${sourceTitle.split('.')[0]} : ${sourceTitle[sourceTitle]}</label></li>
-//         `
-//     }).join('');
-
-
-    
-// }
 
 
 callAPI()
