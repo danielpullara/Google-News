@@ -1,7 +1,7 @@
 
 # CoderSchool FTW - * Name of Your Project Here *
 
-Created with love by: <Your Name Here>
+Created with love by Danny
   
 One or two sentence summary of your project. 
 
