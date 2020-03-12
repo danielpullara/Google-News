@@ -9,9 +9,14 @@
 
 <body>
     <h1>Danny's News Desk</h1>
-    <div id="newsArea">
-      
-    </div>
+    <select id="category" onchange="searchByCategory()">
+        <option value="business">business</option>
+        <option value="entertainment">entertainment</option>
+        <option value="general">general</option>
+        <option value="health">health</option>
+    </select>
+    <!-- <div id="sourceArea">ss</div> -->
+    <div id="newsArea"></div>
     <button onclick="seemore()">seemore</button>
     <script src="moment-with-locales.js"></script>
     <script src="main.js"></script>
